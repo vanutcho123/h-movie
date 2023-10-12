@@ -1,0 +1,26 @@
+.filter {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: linear-gradient(168deg, #2e335a 1.62%, #1c1b33 95.72%);
+  z-index: 999;
+  ul {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+
+    li {
+      list-style: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+      letter-spacing: -0.408px;
+      padding: 0 16px;
+      cursor: pointer;
+    }
+  }
+}

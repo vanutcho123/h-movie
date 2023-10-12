@@ -1,0 +1,23 @@
+.home {
+  &__main {
+    padding: 30px 50px;
+
+    .list-video {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px 16px;
+      video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .list-video {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 50px 16px;
+      li {
+        list-style: none;
+      }
+    }
+  }
+}

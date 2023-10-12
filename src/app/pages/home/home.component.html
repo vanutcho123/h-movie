@@ -1,0 +1,12 @@
+<div class="home">
+  <div class="home__container">
+    <app-filter></app-filter>
+    <div class="home__main">
+      <ul class="list-video">
+        <li class="item-video" *ngFor="let item of videoData">
+          <app-card-video [video]="item"></app-card-video>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

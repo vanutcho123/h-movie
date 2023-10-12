@@ -1,0 +1,67 @@
+<header class="header">
+  <div class="header__container">
+    <div class="header__left"></div>
+    <div class="header__mid">
+      <div class="formSearch">
+        <button
+          mat-raised-button
+          matTooltip="Search"
+          matTooltipClass="example-tooltip-uppercase"
+          aria-label="Button that shows a red tooltip"
+          class="header__button-search"
+        >
+          <mat-icon class="header__icon-search">search</mat-icon>
+        </button>
+        <input type="search" placeholder="Search..." class="form-control" />
+
+        <button
+          mat-raised-button
+          matTooltip="Search with your voice"
+          matTooltipClass="example-tooltip-uppercase"
+          aria-label="Button that shows a red tooltip"
+          class="header__button-mic"
+        >
+          <mat-icon class="header__icon-mic"> mic_none </mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="header__right">
+      <button
+        mat-raised-button
+        matTooltip="Create video"
+        matTooltipClass="example-tooltip-uppercase"
+        aria-label="Button that shows a red tooltip"
+        class="header__button header__button-video"
+      >
+        <mat-icon class="header__icon-video">video_call</mat-icon>
+      </button>
+      <button
+        mat-raised-button
+        matTooltip="Notifications"
+        matTooltipClass="example-tooltip-uppercase"
+        aria-label="Button that shows a red tooltip"
+        class="header__button header__button-notifications"
+        matBadge="4"
+        matBadgeOverlap="false"
+        matBadgeColor="warn"
+      >
+        <mat-icon class="header__icon-notifications"
+          >notifications_none</mat-icon
+        >
+      </button>
+      <div class="header__avatar">
+        <div
+          class="header__button header__button-avatar"
+          mat-button
+          [matMenuTriggerFor]="avatar"
+        >
+          <img [src]="avatarPath" alt="" />
+        </div>
+
+        <mat-menu #avatar="matMenu">
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</header>

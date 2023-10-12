@@ -1,0 +1,41 @@
+<div class="sidebar">
+  <div class="sidebar__container">
+    <div class="sidebar__logo">
+      <h2>hMovie</h2>
+    </div>
+    <div class="sidebar__nav">
+      <ul>
+        <li
+          *ngFor="let side of sidebars"
+          [ngClass]="{ active: side.isActive }"
+          (click)="setActive(side)"
+        >
+          <a [routerLink]="side.routerLink">
+            <mat-icon>{{ side.icon }}</mat-icon>
+            <span>{{ side.title }}</span>
+          </a>
+        </li>
+      </ul>
+      <h2 class="sidebar__title">My Channel</h2>
+      <ul>
+        <li
+          *ngFor="let channel of channels"
+          [ngClass]="{ active: channel.isActive }"
+          (click)="setActive(channel)"
+        >
+          <a [routerLink]="channel.routerLink">
+            <mat-icon>{{ channel.icon }}</mat-icon>
+            <span>{{ channel.title }}</span>
+          </a>
+        </li>
+      </ul>
+      <h2 class="sidebar__title">Subscriptions</h2>
+      <ul class="sidebar__subscriptions">
+        <li *ngFor="let sub of subscriptions">
+          <img [src]="sub.image" [alt]="sub.image" />
+          <span>{{ sub.title }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

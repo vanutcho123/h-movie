@@ -1,0 +1,12 @@
+.dfLayout {
+  &__main {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__sidebar {
+    flex: 0.3;
+  }
+  &__router {
+    flex: 1;
+  }
+}
